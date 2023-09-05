@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "d36d8ed9-f068-4e8a-aa67-f977dc906c87",
+		"name": "Quran-Exams",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21751929"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://quran-exam-api.dis-store.website/auth/login/",
+							"protocol": "https",
+							"host": [
+								"quran-exam-api",
+								"dis-store",
+								"website"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://quran-exam-api.dis-store.website/auth/register/",
+							"protocol": "https",
+							"host": [
+								"quran-exam-api",
+								"dis-store",
+								"website"
+							],
+							"path": [
+								"auth",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 18ac801791ab79a79702bbc7fa2f2b22138f15b5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://quran-exam-api.dis-store.website/",
+					"protocol": "https",
+					"host": [
+						"quran-exam-api",
+						"dis-store",
+						"website"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 18ac801791ab79a79702bbc7fa2f2b22138f15b5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://quran-exam-api.dis-store.website/session/",
+					"protocol": "https",
+					"host": [
+						"quran-exam-api",
+						"dis-store",
+						"website"
+					],
+					"path": [
+						"session",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Question Session",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token 18ac801791ab79a79702bbc7fa2f2b22138f15b5",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://quran-exam-api.dis-store.website/q/1739da54-3de1-45af-b596-c8ba8d7eb8c8/",
+					"protocol": "https",
+					"host": [
+						"quran-exam-api",
+						"dis-store",
+						"website"
+					],
+					"path": [
+						"q",
+						"1739da54-3de1-45af-b596-c8ba8d7eb8c8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_answer",
+							"value": "سُورَةُ السَّجۡدَةِ",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "1739da54-3de1-45af-b596-c8ba8d7eb8c8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://quran-exam-api.dis-store.website/q/1739da54-3de1-45af-b596-c8ba8d7eb8c8/",
+					"protocol": "https",
+					"host": [
+						"quran-exam-api",
+						"dis-store",
+						"website"
+					],
+					"path": [
+						"q",
+						"1739da54-3de1-45af-b596-c8ba8d7eb8c8",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "token 18ac801791ab79a79702bbc7fa2f2b22138f15b5",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
